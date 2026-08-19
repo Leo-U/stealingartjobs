@@ -179,7 +179,7 @@ h1 {
   color: color-mix(in srgb, var(--paper) 58%, transparent);
   display: block;
   font-family: "DM Mono", monospace;
-  font-size: clamp(54px, 7vw, 92px);
+  font-size: clamp(130px, 16vw, 240px);
   line-height: 1;
   opacity: 0;
   text-shadow: 0 2px 18px color-mix(in srgb, var(--ink) 55%, transparent);
