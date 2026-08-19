@@ -161,43 +161,53 @@ h1 {
 
 .comic-arrow {
   align-items: center;
-  background: color-mix(in srgb, var(--ink) 44%, transparent);
+  background: transparent;
   border: 0;
-  border-radius: 50%;
+  bottom: 0;
   color: var(--paper);
   cursor: pointer;
   display: flex;
-  font-family: "DM Mono", monospace;
-  font-size: 36px;
-  height: 76px;
-  justify-content: center;
-  opacity: 0;
-  padding: 0 0 3px;
+  padding: 0 22px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: opacity 150ms ease, background 150ms ease, transform 150ms ease;
-  width: 76px;
+  top: 0;
+  width: 50%;
   z-index: 2;
 }
 
-.comic-arrow-previous { left: 18px; }
-.comic-arrow-next { right: 18px; }
+.comic-arrow span {
+  align-items: center;
+  background: color-mix(in srgb, var(--ink) 38%, transparent);
+  border: 1px solid color-mix(in srgb, var(--paper) 32%, transparent);
+  border-radius: 50%;
+  display: flex;
+  font-family: "DM Mono", monospace;
+  font-size: 34px;
+  height: 68px;
+  justify-content: center;
+  opacity: 0;
+  padding-bottom: 3px;
+  transition: opacity 150ms ease, background 150ms ease, transform 150ms ease;
+  width: 68px;
+}
 
-.comic-frame:hover .comic-arrow:not(:disabled),
-.comic-arrow:focus-visible {
+.comic-arrow-previous { justify-content: flex-start; left: 0; }
+.comic-arrow-next { justify-content: flex-end; right: 0; }
+
+.comic-arrow:hover:not(:disabled) span,
+.comic-arrow:focus-visible span {
   opacity: 1;
 }
 
-.comic-arrow:hover:not(:disabled) {
+.comic-arrow:hover:not(:disabled) span {
   background: color-mix(in srgb, var(--accent) 68%, transparent);
-  transform: translateY(-50%) scale(1.06);
+  transform: scale(1.06);
 }
 
 .comic-arrow:disabled {
-  opacity: 0;
   pointer-events: none;
 }
+
+.comic-arrow:disabled span { opacity: 0; }
 
 .reader-controls {
   align-items: center;
@@ -285,9 +295,8 @@ footer {
   .reader-controls { grid-template-columns: 1fr 1fr; }
   .reader-controls button { width: 100%; }
   .reader-position { grid-column: 1 / -1; grid-row: 1; margin-bottom: 5px; }
-  .comic-arrow:not(:disabled) { height: 58px; opacity: 0.76; width: 58px; }
-  .comic-arrow-previous { left: 10px; }
-  .comic-arrow-next { right: 10px; }
+  .comic-arrow { padding: 0 12px; }
+  .comic-arrow:not(:disabled) span { height: 54px; opacity: 0.76; width: 54px; }
   .about { margin-top: 100px; padding: 24px 20px 90px; }
   .about-grid { gap: 34px; grid-template-columns: 1fr; margin-top: 38px; }
   footer { margin: 0 20px; padding-left: 0; padding-right: 0; }
