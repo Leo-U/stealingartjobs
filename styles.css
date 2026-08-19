@@ -167,7 +167,8 @@ h1 {
   color: var(--paper);
   cursor: pointer;
   display: flex;
-  padding: 0 22px;
+  justify-content: center;
+  padding: 0;
   position: absolute;
   top: 0;
   width: 50%;
@@ -175,23 +176,18 @@ h1 {
 }
 
 .comic-arrow span {
-  align-items: center;
-  background: color-mix(in srgb, var(--ink) 38%, transparent);
-  border: 1px solid color-mix(in srgb, var(--paper) 32%, transparent);
-  border-radius: 50%;
-  display: flex;
+  color: color-mix(in srgb, var(--paper) 58%, transparent);
+  display: block;
   font-family: "DM Mono", monospace;
-  font-size: 34px;
-  height: 68px;
-  justify-content: center;
+  font-size: clamp(54px, 7vw, 92px);
+  line-height: 1;
   opacity: 0;
-  padding-bottom: 3px;
-  transition: opacity 150ms ease, background 150ms ease, transform 150ms ease;
-  width: 68px;
+  text-shadow: 0 2px 18px color-mix(in srgb, var(--ink) 55%, transparent);
+  transition: opacity 150ms ease, transform 150ms ease;
 }
 
-.comic-arrow-previous { justify-content: flex-start; left: 0; }
-.comic-arrow-next { justify-content: flex-end; right: 0; }
+.comic-arrow-previous { left: 0; }
+.comic-arrow-next { right: 0; }
 
 .comic-arrow:hover:not(:disabled) span,
 .comic-arrow:focus-visible span {
@@ -199,7 +195,7 @@ h1 {
 }
 
 .comic-arrow:hover:not(:disabled) span {
-  background: color-mix(in srgb, var(--accent) 68%, transparent);
+  opacity: 0.78;
   transform: scale(1.06);
 }
 
@@ -295,8 +291,7 @@ footer {
   .reader-controls { grid-template-columns: 1fr 1fr; }
   .reader-controls button { width: 100%; }
   .reader-position { grid-column: 1 / -1; grid-row: 1; margin-bottom: 5px; }
-  .comic-arrow { padding: 0 12px; }
-  .comic-arrow:not(:disabled) span { height: 54px; opacity: 0.76; width: 54px; }
+  .comic-arrow:not(:disabled) span { opacity: 0.58; }
   .about { margin-top: 100px; padding: 24px 20px 90px; }
   .about-grid { gap: 34px; grid-template-columns: 1fr; margin-top: 38px; }
   footer { margin: 0 20px; padding-left: 0; padding-right: 0; }
