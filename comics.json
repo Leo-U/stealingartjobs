@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "slug": "alcoholic",
+    "title": "Alcoholic",
+    "date": "Uploaded August 18, 2026",
+    "image": "comics/alcoholic.png",
+    "alt": "Two-panel comic. A man turns the phrase ‘could be’ into ‘cold beer,’ then has a revelation and declares, ‘That’s it! I’m an alcoholic!’"
+  },
+  {
+    "slug": "douchebag",
+    "title": "Douchebag",
+    "date": "Uploaded August 18, 2026",
+    "image": "comics/douchebag.png?v=3",
+    "alt": "Two-panel comic. A man celebrates winning an online chess game, then says, ‘Yeah, they should have stuck to medicine!’"
+  }
+]

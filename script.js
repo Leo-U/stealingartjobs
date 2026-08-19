@@ -9,7 +9,8 @@ const elements = {
   comicDate: document.querySelector("#comic-date"),
   comicTitle: document.querySelector("#comic-title"),
   comicImage: document.querySelector("#comic-image"),
-  emptyState: document.querySelector("#empty-state"),
+  comicPrevious: document.querySelector("#comic-previous"),
+  comicNext: document.querySelector("#comic-next"),
   firstButton: document.querySelector("#first-button"),
   previousButton: document.querySelector("#previous-button"),
   nextButton: document.querySelector("#next-button"),
@@ -60,11 +61,12 @@ function showComic(index, updateHash = true) {
   elements.comicImage.src = comic.image;
   elements.comicImage.alt = comic.alt;
   elements.comicImage.hidden = false;
-  elements.emptyState.hidden = true;
   elements.readerPosition.textContent = `${state.currentIndex + 1} / ${state.comics.length}`;
   elements.firstButton.disabled = state.currentIndex === 0;
   elements.previousButton.disabled = state.currentIndex === 0;
+  elements.comicPrevious.disabled = state.currentIndex === 0;
   elements.nextButton.disabled = state.currentIndex === state.comics.length - 1;
+  elements.comicNext.disabled = state.currentIndex === state.comics.length - 1;
   elements.latestButton.disabled = state.currentIndex === state.comics.length - 1;
   if (updateHash) history.replaceState(null, "", `#comic-${comic.slug}`);
 }
@@ -96,6 +98,8 @@ elements.archiveList.addEventListener("click", (event) => {
 elements.firstButton.addEventListener("click", () => showComic(0));
 elements.previousButton.addEventListener("click", () => showComic(state.currentIndex - 1));
 elements.nextButton.addEventListener("click", () => showComic(state.currentIndex + 1));
+elements.comicPrevious.addEventListener("click", () => showComic(state.currentIndex - 1));
+elements.comicNext.addEventListener("click", () => showComic(state.currentIndex + 1));
 elements.latestButton.addEventListener("click", () => showComic(state.comics.length - 1));
 elements.themeButton.addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
 document.addEventListener("keydown", (event) => {
@@ -106,5 +110,4 @@ document.addEventListener("keydown", (event) => {
 
 const savedTheme = localStorage.getItem("saj-theme");
 setTheme(savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
-document.querySelector("#year").textContent = new Date().getFullYear();
 loadComics();
