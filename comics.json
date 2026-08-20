@@ -19,5 +19,12 @@
     "date": "Uploaded August 19, 2026",
     "image": "comics/fool.png?v=2",
     "alt": "A tired-looking man wonders, ‘Why?? Why can’t I find the energy?’ while vaping from a device labeled ‘Juulfool.’"
+  },
+  {
+    "slug": "artist",
+    "title": "Artist",
+    "date": "Uploaded August 20, 2026",
+    "image": "comics/artist.png?v=1",
+    "alt": "A comic artist condemns AI-generated art, briefly imagines using it to finish work and spend time with family, dismisses the idea as bullshit, then resumes drawing alone late at night."
   }
 ]
