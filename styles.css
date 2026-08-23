@@ -159,6 +159,15 @@ h1 {
   width: 100%;
 }
 
+.comic-caption {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 20px auto 0;
+  max-width: 760px;
+  text-align: center;
+}
+
 .comic-arrow {
   align-items: center;
   background: transparent;
@@ -292,6 +301,7 @@ footer {
   .reader-controls button { width: 100%; }
   .reader-position { grid-column: 1 / -1; grid-row: 1; margin-bottom: 5px; }
   .comic-arrow:not(:disabled) span { opacity: 0.58; }
+  .comic-caption { font-size: 14px; margin-top: 16px; }
   .about { margin-top: 100px; padding: 24px 20px 90px; }
   .about-grid { gap: 34px; grid-template-columns: 1fr; margin-top: 38px; }
   footer { margin: 0 20px; padding-left: 0; padding-right: 0; }

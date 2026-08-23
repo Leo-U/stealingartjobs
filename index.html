@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=10" />
+    <link rel="stylesheet" href="styles.css?v=11" />
   </head>
   <body>
     <header class="site-header">
@@ -56,6 +56,8 @@
           <button class="comic-arrow comic-arrow-next" id="comic-next" type="button" aria-label="Next comic"><span aria-hidden="true">&gt;</span></button>
         </figure>
 
+        <p class="comic-caption" id="comic-caption" hidden></p>
+
         <div class="reader-controls" aria-label="Comic navigation">
           <button id="first-button" type="button" disabled><span aria-hidden="true">↤</span> First</button>
           <button id="previous-button" type="button" disabled><span aria-hidden="true">←</span> Previous</button>
@@ -82,6 +84,6 @@
       <a href="#comic">Back to top ↑</a>
     </footer>
 
-    <script src="script.js?v=6" defer></script>
+    <script src="script.js?v=7" defer></script>
   </body>
 </html>

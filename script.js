@@ -9,6 +9,7 @@ const elements = {
   comicDate: document.querySelector("#comic-date"),
   comicTitle: document.querySelector("#comic-title"),
   comicImage: document.querySelector("#comic-image"),
+  comicCaption: document.querySelector("#comic-caption"),
   comicPrevious: document.querySelector("#comic-previous"),
   comicNext: document.querySelector("#comic-next"),
   firstButton: document.querySelector("#first-button"),
@@ -61,6 +62,8 @@ function showComic(index, updateHash = true) {
   elements.comicImage.src = comic.image;
   elements.comicImage.alt = comic.alt;
   elements.comicImage.hidden = false;
+  elements.comicCaption.textContent = comic.caption || "";
+  elements.comicCaption.hidden = !comic.caption;
   elements.readerPosition.textContent = `${state.currentIndex + 1} / ${state.comics.length}`;
   elements.firstButton.disabled = state.currentIndex === 0;
   elements.previousButton.disabled = state.currentIndex === 0;
