@@ -52,6 +52,21 @@ function renderArchive() {
   `).join("");
 }
 
+function renderCaption(caption = "") {
+  elements.comicCaption.replaceChildren();
+  const parts = caption.split(/(\*[^*]+\*)/g);
+  parts.forEach((part) => {
+    if (part.startsWith("*") && part.endsWith("*")) {
+      const emphasis = document.createElement("em");
+      emphasis.textContent = part.slice(1, -1);
+      elements.comicCaption.append(emphasis);
+    } else {
+      elements.comicCaption.append(document.createTextNode(part));
+    }
+  });
+  elements.comicCaption.hidden = !caption;
+}
+
 function showComic(index, updateHash = true) {
   if (!state.comics.length) return;
   state.currentIndex = Math.max(0, Math.min(index, state.comics.length - 1));
@@ -62,8 +77,7 @@ function showComic(index, updateHash = true) {
   elements.comicImage.src = comic.image;
   elements.comicImage.alt = comic.alt;
   elements.comicImage.hidden = false;
-  elements.comicCaption.textContent = comic.caption || "";
-  elements.comicCaption.hidden = !comic.caption;
+  renderCaption(comic.caption);
   elements.readerPosition.textContent = `${state.currentIndex + 1} / ${state.comics.length}`;
   elements.firstButton.disabled = state.currentIndex === 0;
   elements.previousButton.disabled = state.currentIndex === 0;
