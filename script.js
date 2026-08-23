@@ -95,7 +95,7 @@ async function loadComics() {
     state.comics = await response.json();
     renderArchive();
     if (!state.comics.length) return;
-    const slugAliases = { automoderation: "angry-moderator" };
+    const slugAliases = { "angry-moderator": "automoderation" };
     const requestedSlug = location.hash.replace("#comic-", "");
     const slug = slugAliases[requestedSlug] || requestedSlug;
     const requestedIndex = state.comics.findIndex((comic) => comic.slug === slug);
