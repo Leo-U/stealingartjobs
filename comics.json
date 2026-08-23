@@ -27,5 +27,12 @@
     "image": "comics/artist.png?v=8",
     "alt": "A comic artist condemns AI-generated art, briefly imagines using it to finish work and spend time with family, dismisses the idea as bullshit, then resumes drawing alone late at night.",
     "caption": "Turns out the process described in the thought bubble doesn't work as reliably as I thought. I'm not going to remove this comic because my mistake is funny. In my defense, an LLM *did* make comic #3 based on the style of #2."
+  },
+  {
+    "slug": "automoderation",
+    "title": "An argument for automoderation",
+    "date": "Uploaded August 23, 2026",
+    "image": "comics/automoderation.png",
+    "alt": "Four-panel comic. A post arguing about freelance-platform fees is automatically removed for containing an external link. The author politely messages the moderators, then is temporarily banned for self-promotion."
   }
 ]
