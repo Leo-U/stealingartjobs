@@ -29,10 +29,10 @@
     "caption": "Turns out the process described in the thought bubble doesn't work as reliably as I thought. I'm not going to remove this comic because my mistake is funny. In my defense, an LLM *did* make comic #3 based on the style of #2."
   },
   {
-    "slug": "automoderation",
+    "slug": "angry-moderator",
     "title": "Angry moderator",
     "date": "Uploaded August 23, 2026",
-    "image": "comics/automoderation.png?v=2",
+    "image": "comics/automoderation.png?v=3",
     "alt": "Four-panel comic. A post arguing about freelance-platform fees is automatically removed for containing an external link. The author politely messages the moderators, then is temporarily banned for self-promotion."
   }
 ]

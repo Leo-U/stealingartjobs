@@ -95,9 +95,15 @@ async function loadComics() {
     state.comics = await response.json();
     renderArchive();
     if (!state.comics.length) return;
-    const slug = location.hash.replace("#comic-", "");
+    const slugAliases = { automoderation: "angry-moderator" };
+    const requestedSlug = location.hash.replace("#comic-", "");
+    const slug = slugAliases[requestedSlug] || requestedSlug;
     const requestedIndex = state.comics.findIndex((comic) => comic.slug === slug);
-    showComic(requestedIndex >= 0 ? requestedIndex : state.comics.length - 1, false);
+    const initialIndex = requestedIndex >= 0 ? requestedIndex : state.comics.length - 1;
+    showComic(initialIndex, false);
+    if (location.hash.startsWith("#comic-") && state.comics[initialIndex].slug !== requestedSlug) {
+      history.replaceState(null, "", `#comic-${state.comics[initialIndex].slug}`);
+    }
   } catch {
     renderArchive();
   }
