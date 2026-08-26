@@ -34,5 +34,12 @@
     "date": "Uploaded August 23, 2026",
     "image": "comics/automoderation.png?v=3",
     "alt": "Four-panel comic. A post arguing about freelance-platform fees is automatically removed for containing an external link. The author politely messages the moderators, then is temporarily banned for self-promotion."
+  },
+  {
+    "slug": "executive",
+    "title": "Executive",
+    "date": "Uploaded August 26, 2026",
+    "image": "comics/executive.png",
+    "alt": "A pharmaceutical chemist earning $74,000 says it is okay that India copied a drug formula because people need it. A pharmaceutical executive earning $324,000 angrily protests the cost of research and development and India's lack of respect for intellectual property."
   }
 ]
