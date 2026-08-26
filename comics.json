@@ -6,7 +6,7 @@
     "image": "/comics/alcoholic.png",
     "alt": "Two-panel comic. A man turns the phrase ‘could be’ into ‘cold beer,’ then has a revelation and declares, ‘That’s it! I’m an alcoholic!’",
     "description": "A two-panel wordplay comic about turning ‘could be’ into ‘cold beer’ and reaching an unfortunate revelation.",
-    "transcript": ["Man: Could be.", "Man, thinking: Could be… cold be… cold beer…", "Man: That's it! I'm an alcoholic!"]
+    "transcript": ["Panel 1: A tired-looking man sits at a table beside a mug. He says, ‘Could be.’ In a thought bubble, he repeats the phrase and gradually changes it: ‘Could be… cold be… cold beer…’", "Panel 2: A light bulb appears above the man's head. He raises one finger with a startled expression and declares, ‘That's it! I'm an alcoholic!’"]
   },
   {
     "slug": "douchebag",
@@ -15,7 +15,7 @@
     "image": "/comics/douchebag.png?v=5",
     "alt": "Two-panel comic. A man celebrates winning an online chess game, then says, ‘Yeah, they should have stuck to medicine!’",
     "description": "A two-panel online-chess comic about beating a player named Dr.MateMD and drawing a smug conclusion.",
-    "transcript": ["The chess screen shows Dr.MateMD versus pawgniid and says: You won.", "Man: Yes!", "Man: Yeah, they should have stuck to medicine!"]
+    "transcript": ["Panel 1: A man sits at a computer after an online chess game. The screen shows that pawgniid defeated Dr.MateMD, whose rating is 1827, and displays ‘You won.’ The man celebrates: ‘Yes!’", "Panel 2: The man turns away from the computer with a smug expression, raises one finger, and says, ‘Yeah, they should have stuck to medicine!’"]
   },
   {
     "slug": "fool",
@@ -24,7 +24,7 @@
     "image": "/comics/fool.png?v=3",
     "alt": "A tired-looking man wonders, ‘Why?? Why can’t I find the energy?’ while vaping from a device labeled ‘Juulfool.’",
     "description": "A tired man wonders why he cannot find any energy while vaping from a device labeled Juulfool.",
-    "transcript": ["Man, thinking: Why?? Why can't I find the energy?", "The vaping device is labeled: Juulfool."]
+    "transcript": ["Single panel: An exhausted-looking man with heavy eyelids inhales from a teal vaping device while a cloud of vapor drifts behind him. He thinks, ‘Why?? Why can't I find the energy?’", "The vaping device in his hand is labeled ‘Juulfool.’"]
   },
   {
     "slug": "artist",
@@ -33,7 +33,7 @@
     "image": "/comics/artist.png?v=8",
     "alt": "A comic artist condemns AI-generated art, briefly imagines using it to finish work and spend time with family, dismisses the idea as bullshit, then resumes drawing alone late at night.",
     "description": "A comic artist condemns AI-generated art, imagines using it to finish work and spend time with family, then returns to drawing alone.",
-    "transcript": ["Artist: AI-generated art is destroying my livelihood!!", "Artist, thinking: But wait… am I wrong?", "Computer prompt: Draw knight entering town in style of photo. Generate.", "Artist, thinking: Nah never mind—that's bullshit!"],
+    "transcript": ["Panel 1: A furious comic artist gestures with both hands and shouts, ‘AI-generated art is destroying my livelihood!!’", "Panel 2: His expression softens as he considers another possibility: ‘But wait… am I wrong?’", "Thought sequence, panel 1: He photographs a drawing of a knight facing a dragon.", "Thought sequence, panel 2: At a computer, he enters the prompt ‘Draw knight entering town in style of photo’ and selects ‘Generate.’", "Thought sequence, panel 3: He looks at the generated image of a knight riding through a town.", "Thought sequence, panel 4: He happily spends time playing a board game with his family.", "Panel 3: He dismisses the idea, thinking, ‘Nah never mind—that's bullshit!’", "Panel 4: Late at night, he sits alone at his desk and continues drawing by hand."],
     "caption": "Turns out the process described in the thought bubble doesn't work as reliably as I thought. I'm not going to remove this comic because my mistake is funny. In my defense, an LLM *did* make comic #3 based on the style of #2."
   },
   {
@@ -43,7 +43,7 @@
     "image": "/comics/automoderation.png?v=3",
     "alt": "Four-panel comic. A post arguing about freelance-platform fees is automatically removed for containing an external link. The author politely messages the moderators, then is temporarily banned for self-promotion.",
     "description": "A comic about an automatically removed Reddit post, a polite appeal to moderators, and a five-day ban for self-promotion.",
-    "transcript": ["Post: Freelance platforms like Fiverr and Upwork might be bad for the economy because of their fees. A privately owned, publicly owned, nonprofit, taxpayer-funded, or otherwise public-interest alternative could provide the same marketplace function without taking a cut from transactions. But I defer to the expert consensus on this one.", "Notice: Post removed automatically. Reason: external links can be self-promotion.", "Message to r/Fiverr Mods: I hope you're having a great day! Please allow the post. It doesn't count as self-promotion.", "A day or two later: You have been temporarily banned from participating in r/Fiverr for 5 days. Note from the moderators: Rule 1: No self-promotion."]
+    "transcript": ["Panel 1: A Reddit-style post is being submitted to r/Fiverr. It reads, ‘Freelance platforms like Fiverr and Upwork might be bad for the economy because of their fees. A privately owned, publicly owned, nonprofit, taxpayer-funded, or otherwise public-interest alternative could provide the same marketplace function without taking a cut from transactions. But I defer to the expert consensus on this one.’ An external link follows. The cursor clicks ‘Post.’", "Panel 2: A red X appears above the notice ‘Post removed automatically.’ The reason given is: ‘External links can be self-promotion.’", "Panel 3: The author writes to the r/Fiverr moderators: ‘I hope you're having a great day! Please allow the post. It doesn't count as self-promotion.’ The cursor clicks ‘Send.’", "Panel 4, labeled ‘A day or two later’: A notice says, ‘You have been temporarily banned from participating in r/Fiverr for 5 days.’ The moderator note reads, ‘Rule 1: No self-promotion.’"]
   },
   {
     "slug": "executive",
@@ -52,6 +52,6 @@
     "image": "/comics/executive.png?v=4",
     "alt": "A pharmaceutical chemist earning $78,000 says it is okay that India copied a drug formula because people need it. A pharmaceutical executive earning $363,000 angrily protests the cost of research and development and India's lack of respect for intellectual property. A closing line says the executive believes his higher pay reflects higher aptitude, a larger skillset, and a properly oriented moral compass.",
     "description": "A pharmaceutical chemist and executive take opposing positions on drug formulas, intellectual property, research costs, and access to medicine.",
-    "transcript": ["Pharmaceutical chemist — $78,000/year: I think it's okay that India copied the formula. Their people need—", "Pharmaceutical executive — $363,000/year: Do you have any idea how much R&D costs?! India has no respect for innovation or intellectual property!!", "The pharmaceutical executive believes his higher pay reflects higher aptitude, a larger skillset, and a properly oriented moral compass."]
+    "transcript": ["Left side: A calm pharmaceutical chemist wearing glasses and a lab coat is labeled ‘$78,000/year.’ She says, ‘I think it's okay that India copied the formula. Their people need—’", "Right side: A pharmaceutical executive in a suit points at her and shouts. He is labeled ‘$363,000/year’ and says, ‘Do you have any idea how much R&D costs?! India has no respect for innovation or intellectual property!!’ The words ‘intellectual property’ are underlined in red.", "Closing caption: ‘The pharmaceutical executive believes his higher pay reflects higher aptitude, a larger skillset, and a properly oriented moral compass.’"]
   }
 ]

@@ -62,7 +62,7 @@ def render_page(template: str, comic: dict, index: int, total: int) -> str:
     page = replace(r'(<span class="reader-position" id="reader-position">).*?(</span>)', rf"\g<1>{index + 1} / {total}\g<2>", page)
     transcript = "\n".join(f"            <p>{html.escape(line)}</p>" for line in comic["transcript"])
     transcript_html = f'''<details class="comic-transcript" id="comic-transcript">
-          <summary>Transcript</summary>
+          <summary>Transcript and visual description</summary>
           <div class="comic-transcript-copy" id="comic-transcript-copy">
 {transcript}
           </div>
