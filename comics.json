@@ -3,43 +3,55 @@
     "slug": "alcoholic",
     "title": "Alcoholic",
     "date": "Uploaded August 18, 2026",
-    "image": "comics/alcoholic.png",
-    "alt": "Two-panel comic. A man turns the phrase ‘could be’ into ‘cold beer,’ then has a revelation and declares, ‘That’s it! I’m an alcoholic!’"
+    "image": "/comics/alcoholic.png",
+    "alt": "Two-panel comic. A man turns the phrase ‘could be’ into ‘cold beer,’ then has a revelation and declares, ‘That’s it! I’m an alcoholic!’",
+    "description": "A two-panel wordplay comic about turning ‘could be’ into ‘cold beer’ and reaching an unfortunate revelation.",
+    "transcript": ["Man: Could be.", "Man, thinking: Could be… cold be… cold beer…", "Man: That's it! I'm an alcoholic!"]
   },
   {
     "slug": "douchebag",
     "title": "Douchebag",
     "date": "Uploaded August 18, 2026",
-    "image": "comics/douchebag.png?v=5",
-    "alt": "Two-panel comic. A man celebrates winning an online chess game, then says, ‘Yeah, they should have stuck to medicine!’"
+    "image": "/comics/douchebag.png?v=5",
+    "alt": "Two-panel comic. A man celebrates winning an online chess game, then says, ‘Yeah, they should have stuck to medicine!’",
+    "description": "A two-panel online-chess comic about beating a player named Dr.MateMD and drawing a smug conclusion.",
+    "transcript": ["The chess screen shows Dr.MateMD versus pawgniid and says: You won.", "Man: Yes!", "Man: Yeah, they should have stuck to medicine!"]
   },
   {
     "slug": "fool",
     "title": "Fool",
     "date": "Uploaded August 19, 2026",
-    "image": "comics/fool.png?v=3",
-    "alt": "A tired-looking man wonders, ‘Why?? Why can’t I find the energy?’ while vaping from a device labeled ‘Juulfool.’"
+    "image": "/comics/fool.png?v=3",
+    "alt": "A tired-looking man wonders, ‘Why?? Why can’t I find the energy?’ while vaping from a device labeled ‘Juulfool.’",
+    "description": "A tired man wonders why he cannot find any energy while vaping from a device labeled Juulfool.",
+    "transcript": ["Man, thinking: Why?? Why can't I find the energy?", "The vaping device is labeled: Juulfool."]
   },
   {
     "slug": "artist",
     "title": "Artist",
     "date": "Uploaded August 20, 2026",
-    "image": "comics/artist.png?v=8",
+    "image": "/comics/artist.png?v=8",
     "alt": "A comic artist condemns AI-generated art, briefly imagines using it to finish work and spend time with family, dismisses the idea as bullshit, then resumes drawing alone late at night.",
+    "description": "A comic artist condemns AI-generated art, imagines using it to finish work and spend time with family, then returns to drawing alone.",
+    "transcript": ["Artist: AI-generated art is destroying my livelihood!!", "Artist, thinking: But wait… am I wrong?", "Computer prompt: Draw knight entering town in style of photo. Generate.", "Artist, thinking: Nah never mind—that's bullshit!"],
     "caption": "Turns out the process described in the thought bubble doesn't work as reliably as I thought. I'm not going to remove this comic because my mistake is funny. In my defense, an LLM *did* make comic #3 based on the style of #2."
   },
   {
     "slug": "automoderation",
     "title": "Moderators",
     "date": "Uploaded August 23, 2026",
-    "image": "comics/automoderation.png?v=3",
-    "alt": "Four-panel comic. A post arguing about freelance-platform fees is automatically removed for containing an external link. The author politely messages the moderators, then is temporarily banned for self-promotion."
+    "image": "/comics/automoderation.png?v=3",
+    "alt": "Four-panel comic. A post arguing about freelance-platform fees is automatically removed for containing an external link. The author politely messages the moderators, then is temporarily banned for self-promotion.",
+    "description": "A comic about an automatically removed Reddit post, a polite appeal to moderators, and a five-day ban for self-promotion.",
+    "transcript": ["Post: Freelance platforms like Fiverr and Upwork might be bad for the economy because of their fees. A privately owned, publicly owned, nonprofit, taxpayer-funded, or otherwise public-interest alternative could provide the same marketplace function without taking a cut from transactions. But I defer to the expert consensus on this one.", "Notice: Post removed automatically. Reason: external links can be self-promotion.", "Message to r/Fiverr Mods: I hope you're having a great day! Please allow the post. It doesn't count as self-promotion.", "A day or two later: You have been temporarily banned from participating in r/Fiverr for 5 days. Note from the moderators: Rule 1: No self-promotion."]
   },
   {
     "slug": "executive",
     "title": "Executive",
     "date": "Uploaded August 26, 2026",
-    "image": "comics/executive.png?v=4",
-    "alt": "A pharmaceutical chemist earning $78,000 says it is okay that India copied a drug formula because people need it. A pharmaceutical executive earning $363,000 angrily protests the cost of research and development and India's lack of respect for intellectual property. A closing line says the executive believes his higher pay reflects higher aptitude, a larger skillset, and a properly oriented moral compass."
+    "image": "/comics/executive.png?v=4",
+    "alt": "A pharmaceutical chemist earning $78,000 says it is okay that India copied a drug formula because people need it. A pharmaceutical executive earning $363,000 angrily protests the cost of research and development and India's lack of respect for intellectual property. A closing line says the executive believes his higher pay reflects higher aptitude, a larger skillset, and a properly oriented moral compass.",
+    "description": "A pharmaceutical chemist and executive take opposing positions on drug formulas, intellectual property, research costs, and access to medicine.",
+    "transcript": ["Pharmaceutical chemist — $78,000/year: I think it's okay that India copied the formula. Their people need—", "Pharmaceutical executive — $363,000/year: Do you have any idea how much R&D costs?! India has no respect for innovation or intellectual property!!", "The pharmaceutical executive believes his higher pay reflects higher aptitude, a larger skillset, and a properly oriented moral compass."]
   }
 ]

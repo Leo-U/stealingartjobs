@@ -10,6 +10,8 @@ const elements = {
   comicTitle: document.querySelector("#comic-title"),
   comicImage: document.querySelector("#comic-image"),
   comicCaption: document.querySelector("#comic-caption"),
+  comicTranscript: document.querySelector("#comic-transcript"),
+  comicTranscriptCopy: document.querySelector("#comic-transcript-copy"),
   comicPrevious: document.querySelector("#comic-previous"),
   comicNext: document.querySelector("#comic-next"),
   firstButton: document.querySelector("#first-button"),
@@ -43,11 +45,11 @@ function renderArchive() {
 
   elements.archiveList.innerHTML = state.comics.map((comic, index) => `
     <li>
-      <button type="button" data-comic-index="${index}">
+      <a href="/comics/${comic.slug}/" data-comic-index="${index}">
         <span>${String(index + 1).padStart(2, "0")}</span>
         <strong>${comic.title}</strong>
         <span>${comic.date}</span>
-      </button>
+      </a>
     </li>
   `).join("");
 }
@@ -67,7 +69,47 @@ function renderCaption(caption = "") {
   elements.comicCaption.hidden = !caption;
 }
 
-function showComic(index, updateHash = true) {
+function renderTranscript(lines = []) {
+  elements.comicTranscriptCopy.replaceChildren();
+  lines.forEach((line) => {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = line;
+    elements.comicTranscriptCopy.append(paragraph);
+  });
+  elements.comicTranscript.hidden = !lines.length;
+}
+
+function comicPath(comic) {
+  return `/comics/${comic.slug}/`;
+}
+
+function comicSlugFromPath() {
+  const match = location.pathname.match(/^\/comics\/([^/]+)\/?$/);
+  return match ? decodeURIComponent(match[1]) : "";
+}
+
+function setMeta(selector, value) {
+  const element = document.querySelector(selector);
+  if (element) element.setAttribute("content", value);
+}
+
+function updatePageMetadata(comic, isHome = false) {
+  const title = isHome ? "Stealing Art Jobs — Independent Webcomic" : `${comic.title} — Stealing Art Jobs`;
+  const description = isHome
+    ? "Stealing Art Jobs is an independent webcomic about art, work, technology, and strange incentives."
+    : comic.description;
+  const url = `https://stealingartjobs.com${isHome ? "/" : comicPath(comic)}`;
+  const imageUrl = new URL(comic.image, "https://stealingartjobs.com").href;
+  document.title = title;
+  document.querySelector('meta[name="description"]').setAttribute("content", description);
+  document.querySelector('link[rel="canonical"]').setAttribute("href", url);
+  setMeta('meta[property="og:title"]', title);
+  setMeta('meta[property="og:description"]', description);
+  setMeta('meta[property="og:image"]', imageUrl);
+  setMeta('meta[property="og:url"]', url);
+}
+
+function showComic(index, updateUrl = true) {
   if (!state.comics.length) return;
   state.currentIndex = Math.max(0, Math.min(index, state.comics.length - 1));
   const comic = state.comics[state.currentIndex];
@@ -78,6 +120,7 @@ function showComic(index, updateHash = true) {
   elements.comicImage.alt = comic.alt;
   elements.comicImage.hidden = false;
   renderCaption(comic.caption);
+  renderTranscript(comic.transcript);
   elements.readerPosition.textContent = `${state.currentIndex + 1} / ${state.comics.length}`;
   elements.firstButton.disabled = state.currentIndex === 0;
   elements.previousButton.disabled = state.currentIndex === 0;
@@ -85,24 +128,27 @@ function showComic(index, updateHash = true) {
   elements.nextButton.disabled = state.currentIndex === state.comics.length - 1;
   elements.comicNext.disabled = state.currentIndex === state.comics.length - 1;
   elements.latestButton.disabled = state.currentIndex === state.comics.length - 1;
-  if (updateHash) history.replaceState(null, "", `#comic-${comic.slug}`);
+  if (updateUrl) history.pushState({ comic: comic.slug }, "", comicPath(comic));
+  updatePageMetadata(comic, location.pathname === "/");
 }
 
 async function loadComics() {
   try {
-    const response = await fetch("comics.json");
+    const response = await fetch("/comics.json");
     if (!response.ok) throw new Error("Could not load comic archive");
     state.comics = await response.json();
     renderArchive();
     if (!state.comics.length) return;
     const slugAliases = { "angry-moderator": "automoderation" };
-    const requestedSlug = location.hash.replace("#comic-", "");
+    const fragmentSlug = location.hash.startsWith("#comic-") ? location.hash.replace("#comic-", "") : "";
+    const requestedSlug = comicSlugFromPath() || fragmentSlug;
     const slug = slugAliases[requestedSlug] || requestedSlug;
     const requestedIndex = state.comics.findIndex((comic) => comic.slug === slug);
     const initialIndex = requestedIndex >= 0 ? requestedIndex : state.comics.length - 1;
     showComic(initialIndex, false);
-    if (location.hash.startsWith("#comic-") && state.comics[initialIndex].slug !== requestedSlug) {
-      history.replaceState(null, "", `#comic-${state.comics[initialIndex].slug}`);
+    if (fragmentSlug || slugAliases[requestedSlug]) {
+      history.replaceState({ comic: state.comics[initialIndex].slug }, "", comicPath(state.comics[initialIndex]));
+      updatePageMetadata(state.comics[initialIndex]);
     }
   } catch {
     renderArchive();
@@ -112,9 +158,11 @@ async function loadComics() {
 elements.archiveButton.addEventListener("click", () => toggleArchive());
 elements.archiveClose.addEventListener("click", () => toggleArchive(false));
 elements.archiveList.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-comic-index]");
-  if (!button) return;
-  showComic(Number(button.dataset.comicIndex));
+  const link = event.target.closest("[data-comic-index]");
+  if (!link) return;
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  showComic(Number(link.dataset.comicIndex));
   toggleArchive(false);
   document.querySelector("#comic").scrollIntoView();
 });
@@ -125,6 +173,11 @@ elements.comicPrevious.addEventListener("click", () => showComic(state.currentIn
 elements.comicNext.addEventListener("click", () => showComic(state.currentIndex + 1));
 elements.latestButton.addEventListener("click", () => showComic(state.comics.length - 1));
 elements.themeButton.addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
+window.addEventListener("popstate", () => {
+  const slug = comicSlugFromPath();
+  const index = state.comics.findIndex((comic) => comic.slug === slug);
+  showComic(index >= 0 ? index : state.comics.length - 1, false);
+});
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") toggleArchive(false);
   if (!elements.archivePanel.classList.contains("open") && event.key === "ArrowLeft") showComic(state.currentIndex - 1);
