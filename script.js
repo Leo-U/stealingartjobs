@@ -84,8 +84,7 @@ function renderTranscript(lines = []) {
 
 function renderAuthorNote(note) {
   document.querySelector("#author-note-graphic")?.remove();
-  document.querySelector("#mini-comic-intro")?.remove();
-  document.querySelector("#author-note-after-graphic")?.remove();
+  document.querySelector("#author-note-before-graphic")?.remove();
   if (!note) {
     elements.authorNote.hidden = true;
     elements.authorNoteIntro.textContent = "";
@@ -95,10 +94,10 @@ function renderAuthorNote(note) {
   elements.authorNoteIntro.textContent = note.intro;
   elements.authorNoteCopy.innerHTML = note.html;
   if (note.image) {
-    const miniIntro = document.createElement("p");
-    miniIntro.className = "mini-comic-intro";
-    miniIntro.id = "mini-comic-intro";
-    miniIntro.textContent = note.miniIntro;
+    const beforeGraphic = document.createElement("div");
+    beforeGraphic.className = "author-note-before-graphic";
+    beforeGraphic.id = "author-note-before-graphic";
+    beforeGraphic.innerHTML = note.beforeImageHtml || "";
     const figure = document.createElement("figure");
     figure.className = "author-note-graphic";
     figure.id = "author-note-graphic";
@@ -106,15 +105,8 @@ function renderAuthorNote(note) {
     image.src = note.image;
     image.alt = note.imageAlt;
     figure.append(image);
-    elements.authorNoteCopy.after(miniIntro);
-    miniIntro.after(figure);
-    if (note.afterImageHtml) {
-      const afterGraphic = document.createElement("div");
-      afterGraphic.className = "author-note-after-graphic";
-      afterGraphic.id = "author-note-after-graphic";
-      afterGraphic.innerHTML = note.afterImageHtml;
-      figure.after(afterGraphic);
-    }
+    elements.authorNoteCopy.after(beforeGraphic);
+    beforeGraphic.after(figure);
   }
   elements.authorNote.hidden = false;
 }

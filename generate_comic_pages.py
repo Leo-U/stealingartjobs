@@ -58,7 +58,7 @@ def render_page(template: str, comic: dict, index: int, total: int) -> str:
     if note:
         note_image = ""
         if note.get("image"):
-            note_image = f'<p class="mini-comic-intro" id="mini-comic-intro">{html.escape(note.get("miniIntro", ""))}</p><figure class="author-note-graphic" id="author-note-graphic"><img src="{html.escape(note["image"], quote=True)}" alt="{html.escape(note["imageAlt"], quote=True)}" /></figure><div class="author-note-after-graphic" id="author-note-after-graphic">{note.get("afterImageHtml", "")}</div>'
+            note_image = f'<div class="author-note-before-graphic" id="author-note-before-graphic">{note.get("beforeImageHtml", "")}</div><figure class="author-note-graphic" id="author-note-graphic"><img src="{html.escape(note["image"], quote=True)}" alt="{html.escape(note["imageAlt"], quote=True)}" /></figure>'
         note_html = f'''<aside class="author-note" id="author-note" aria-labelledby="author-note-heading">
           <p class="author-note-label">Author’s note</p>
           <h2 id="author-note-heading">Context before reading</h2>
