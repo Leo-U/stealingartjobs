@@ -54,6 +54,20 @@ def render_page(template: str, comic: dict, index: int, total: int) -> str:
     page = replace(r'(<p class="issue" id="comic-number">).*?(</p>)', rf"\g<1>Comic {index + 1:02d}\g<2>", page)
     page = replace(r'(<p class="date" id="comic-date">).*?(</p>)', rf"\g<1>{html.escape(comic['date'])}\g<2>", page)
     page = replace(r'(<h1 id="comic-title">).*?(</h1>)', rf"\g<1>{html.escape(comic['title'])}\g<2>", page)
+    note = comic.get("authorNote")
+    if note:
+        note_html = f'''<aside class="author-note" id="author-note" aria-labelledby="author-note-heading">
+          <p class="author-note-label">Author’s note</p>
+          <h2 id="author-note-heading">Context before reading</h2>
+          <p class="author-note-intro" id="author-note-intro">{html.escape(note["intro"])}</p>
+          <details open>
+            <summary>Read the full context</summary>
+            <div class="author-note-copy" id="author-note-copy">{note["html"]}</div>
+          </details>
+        </aside>'''
+    else:
+        note_html = '<aside class="author-note" id="author-note" aria-labelledby="author-note-heading" hidden><p class="author-note-label">Author’s note</p><h2 id="author-note-heading">Context before reading</h2><p class="author-note-intro" id="author-note-intro"></p><details open><summary>Read the full context</summary><div class="author-note-copy" id="author-note-copy"></div></details></aside>'
+    page = replace(r'<aside class="author-note" id="author-note".*?</aside>', note_html, page)
     image = f'<img id="comic-image" src="{html.escape(comic["image"], quote=True)}" alt="{html.escape(comic["alt"], quote=True)}" />'
     page = replace(r'<img id="comic-image".*?/>', image, page)
     caption = comic.get("caption", "")

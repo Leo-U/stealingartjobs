@@ -5,6 +5,9 @@ const elements = {
   archiveClose: document.querySelector("#archive-close"),
   archivePanel: document.querySelector("#archive-panel"),
   archiveList: document.querySelector("#archive-list"),
+  authorNote: document.querySelector("#author-note"),
+  authorNoteIntro: document.querySelector("#author-note-intro"),
+  authorNoteCopy: document.querySelector("#author-note-copy"),
   comicNumber: document.querySelector("#comic-number"),
   comicDate: document.querySelector("#comic-date"),
   comicTitle: document.querySelector("#comic-title"),
@@ -79,6 +82,18 @@ function renderTranscript(lines = []) {
   elements.comicTranscript.hidden = !lines.length;
 }
 
+function renderAuthorNote(note) {
+  if (!note) {
+    elements.authorNote.hidden = true;
+    elements.authorNoteIntro.textContent = "";
+    elements.authorNoteCopy.replaceChildren();
+    return;
+  }
+  elements.authorNoteIntro.textContent = note.intro;
+  elements.authorNoteCopy.innerHTML = note.html;
+  elements.authorNote.hidden = false;
+}
+
 function comicPath(comic) {
   return `/comics/${comic.slug}/`;
 }
@@ -119,6 +134,7 @@ function showComic(index, updateUrl = true) {
   elements.comicImage.src = comic.image;
   elements.comicImage.alt = comic.alt;
   elements.comicImage.hidden = false;
+  renderAuthorNote(comic.authorNote);
   renderCaption(comic.caption);
   renderTranscript(comic.transcript);
   elements.readerPosition.textContent = `${state.currentIndex + 1} / ${state.comics.length}`;
