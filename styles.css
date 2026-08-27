@@ -344,6 +344,14 @@ h1 {
 
 .einstein-quote a { color: var(--accent); }
 
+.einstein-quote strong {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  border-bottom: 2px solid var(--accent);
+  color: var(--ink);
+  font-weight: 800;
+  padding: 0 0.12em;
+}
+
 .comic-transcript {
   border-top: 1px solid var(--line);
   margin: 28px auto 0;
