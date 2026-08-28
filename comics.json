@@ -69,5 +69,14 @@
       "beforeImageHtml": "<blockquote class=\"einstein-quote\"><p>“A planned economy, which adjusts production to the needs of the community, would distribute the work to be done among <strong>all those able to work</strong> and would guarantee a livelihood to every man, woman, and child.”</p><cite>— Albert Einstein, <a href=\"https://monthlyreview.org/articles/why-socialism/\">“Why Socialism?”</a></cite></blockquote><p class=\"author-note-transition\">Now we can move on to the main comic.</p><p class=\"mini-comic-intro\">But first, a mini comic!</p>"
     },
     "transcript": ["Single panel: The heading reads, ‘The American software engineer.’ A subheading says, ‘He works at home. He makes $70K/year.’", "A red-eyed man sits at a table typing on a laptop while smoking a joint. He wears a red ‘Make America Great Again’ hat, a blue hoodie, and a gold dollar-sign necklace.", "The software engineer says, ‘Only Americans should do online work for American companies.’"]
+  },
+  {
+    "slug": "captive-users",
+    "title": "Captive Users",
+    "date": "Uploaded August 28, 2026",
+    "image": "/comics/captive-users.png",
+    "alt": "An infographic compares a cam-model site that keeps 40 percent of tips with an ad-supported community site. Both prohibit users from linking to their own sites, keeping traffic and money on the platform.",
+    "description": "A comparison of cam-model and ad-supported community sites that argues both prohibit outbound links to keep traffic and money on their platforms.",
+    "transcript": ["Left side: A cam-model site keeps 40% of tips and will not let models link to their own sites.", "Right side: An ad-supported community site will not let users link to their own sites.", "Closing comparison: ‘Stated purpose: platform-specific rules.’ ‘Unstated incentive: keep traffic — and money — on the platform.’"]
   }
 ]

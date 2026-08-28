@@ -36,6 +36,36 @@ def iso_date(display_date: str) -> str:
     return datetime.strptime(value, "%B %d, %Y").date().isoformat()
 
 
+def render_archive(template: str, comics: list[dict]) -> str:
+    items = "\n".join(
+        f'          <li><a href="/comics/{html.escape(comic["slug"], quote=True)}/" data-comic-index="{index}"><span>{index + 1:02d}</span><strong>{html.escape(comic["title"])}</strong><span>{html.escape(comic["date"])}</span></a></li>'
+        for index, comic in enumerate(comics)
+    )
+    return replace(
+        r'(<ol class="archive-list" id="archive-list">).*?(</ol>)',
+        rf"\g<1>\n{items}\n        \g<2>",
+        template,
+    )
+
+
+def render_homepage(template: str, comic: dict, index: int, total: int) -> str:
+    page = render_page(template, comic, index, total)
+    page = replace(r'<meta name="description" content="[^"]*" />', '<meta name="description" content="Stealing Art Jobs is an independent webcomic about art, work, technology, and strange incentives." />', page)
+    page = replace(r'<meta property="og:type" content="[^"]*" />', '<meta property="og:type" content="website" />', page)
+    page = replace(r'<meta property="og:title" content="[^"]*" />', '<meta property="og:title" content="Stealing Art Jobs" />', page)
+    page = replace(r'<meta property="og:description" content="[^"]*" />', '<meta property="og:description" content="An independent webcomic about art, work, technology, and strange incentives." />', page)
+    page = replace(r'<meta property="og:url" content="[^"]*" />', f'<meta property="og:url" content="{SITE}/" />', page)
+    page = replace(r'<link rel="canonical" href="[^"]*" />', f'<link rel="canonical" href="{SITE}/" />', page)
+    page = replace(r'<title>.*?</title>', '<title>Stealing Art Jobs — Independent Webcomic</title>', page)
+    page = re.sub(
+        r'    <script type="application/ld\+json">\{"@context": "https://schema.org".*?</script>\n',
+        "",
+        page,
+        count=1,
+    )
+    return page
+
+
 def render_page(template: str, comic: dict, index: int, total: int) -> str:
     title = f"{comic['title']} — Stealing Art Jobs"
     path = f"/comics/{comic['slug']}/"
@@ -103,11 +133,16 @@ def render_page(template: str, comic: dict, index: int, total: int) -> str:
 
 def main() -> None:
     comics = json.loads((ROOT / "comics.json").read_text(encoding="utf-8"))
-    template = (ROOT / "index.html").read_text(encoding="utf-8")
+    template = render_archive((ROOT / "index.html").read_text(encoding="utf-8"), comics)
     for index, comic in enumerate(comics):
         destination = ROOT / "comics" / comic["slug"] / "index.html"
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(render_page(template, comic, index, len(comics)), encoding="utf-8")
+
+    (ROOT / "index.html").write_text(
+        render_homepage(template, comics[-1], len(comics) - 1, len(comics)),
+        encoding="utf-8",
+    )
 
     sitemap_entries = []
     latest = iso_date(comics[-1]["date"])
