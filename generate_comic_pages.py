@@ -6,6 +6,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import struct
 from datetime import datetime
 from pathlib import Path
 
@@ -34,6 +35,15 @@ def rich_caption(text: str) -> str:
 def iso_date(display_date: str) -> str:
     value = display_date.removeprefix("Uploaded ")
     return datetime.strptime(value, "%B %d, %Y").date().isoformat()
+
+
+def png_dimensions(image_path: str) -> tuple[int, int]:
+    path = ROOT / image_path.split("?", 1)[0].lstrip("/")
+    with path.open("rb") as image:
+        header = image.read(24)
+    if header[:8] != b"\x89PNG\r\n\x1a\n":
+        raise ValueError(f"Expected a PNG image: {path}")
+    return struct.unpack(">II", header[16:24])
 
 
 def render_archive(template: str, comics: list[dict]) -> str:
@@ -68,17 +78,32 @@ def render_homepage(template: str, comic: dict, index: int, total: int) -> str:
 
 def render_page(template: str, comic: dict, index: int, total: int) -> str:
     title = f"{comic['title']} — Stealing Art Jobs"
+    social_title = comic.get("socialTitle", title)
     path = f"/comics/{comic['slug']}/"
     canonical = f"{SITE}{path}"
     image_url = f"{SITE}{comic['image']}"
     description = comic["description"]
+    social_description = comic.get("socialDescription", description)
+    image_width, image_height = png_dimensions(comic["image"])
     page = template
     page = replace(r'<meta name="description" content="[^"]*" />', f'<meta name="description" content="{html.escape(description, quote=True)}" />', page)
     page = replace(r'<meta property="og:type" content="[^"]*" />', '<meta property="og:type" content="article" />', page)
-    page = replace(r'<meta property="og:title" content="[^"]*" />', f'<meta property="og:title" content="{html.escape(title, quote=True)}" />', page)
-    page = replace(r'<meta property="og:description" content="[^"]*" />', f'<meta property="og:description" content="{html.escape(description, quote=True)}" />', page)
+    page = replace(r'<meta property="og:title" content="[^"]*" />', f'<meta property="og:title" content="{html.escape(social_title, quote=True)}" />', page)
+    page = replace(r'<meta property="og:description" content="[^"]*" />', f'<meta property="og:description" content="{html.escape(social_description, quote=True)}" />', page)
     page = replace(r'<meta property="og:image" content="[^"]*" />', f'<meta property="og:image" content="{html.escape(image_url, quote=True)}" />', page)
     page = replace(r'<meta property="og:url" content="[^"]*" />', f'<meta property="og:url" content="{canonical}" />', page)
+    if "socialTitle" in comic or "socialDescription" in comic:
+        social_meta = f'''    <meta property="og:image:secure_url" content="{html.escape(image_url, quote=True)}" />
+    <meta property="og:image:alt" content="{html.escape(comic["alt"], quote=True)}" />
+    <meta property="og:image:width" content="{image_width}" />
+    <meta property="og:image:height" content="{image_height}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{html.escape(social_title, quote=True)}" />
+    <meta name="twitter:description" content="{html.escape(social_description, quote=True)}" />
+    <meta name="twitter:image" content="{html.escape(image_url, quote=True)}" />
+    <meta name="twitter:image:alt" content="{html.escape(comic["alt"], quote=True)}" />
+'''
+        page = page.replace('    <link rel="canonical"', social_meta + '    <link rel="canonical"', 1)
     page = replace(r'<link rel="canonical" href="[^"]*" />', f'<link rel="canonical" href="{canonical}" />', page)
     page = replace(r"<title>.*?</title>", f"<title>{html.escape(title)}</title>", page)
     page = replace(r'(<p class="issue" id="comic-number">).*?(</p>)', rf"\g<1>Comic {index + 1:02d}\g<2>", page)
