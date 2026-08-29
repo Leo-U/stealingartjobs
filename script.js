@@ -130,15 +130,22 @@ function updatePageMetadata(comic, isHome = false) {
   const description = isHome
     ? "Stealing Art Jobs is an independent webcomic about art, work, technology, and strange incentives."
     : comic.description;
+  const socialTitle = isHome ? "Stealing Art Jobs" : (comic.socialTitle || title);
+  const socialDescription = isHome
+    ? "An independent webcomic about art, work, technology, and strange incentives."
+    : (comic.socialDescription || comic.description);
   const url = `https://stealingartjobs.com${isHome ? "/" : comicPath(comic)}`;
   const imageUrl = new URL(comic.image, "https://stealingartjobs.com").href;
   document.title = title;
   document.querySelector('meta[name="description"]').setAttribute("content", description);
   document.querySelector('link[rel="canonical"]').setAttribute("href", url);
-  setMeta('meta[property="og:title"]', title);
-  setMeta('meta[property="og:description"]', description);
+  setMeta('meta[property="og:title"]', socialTitle);
+  setMeta('meta[property="og:description"]', socialDescription);
   setMeta('meta[property="og:image"]', imageUrl);
   setMeta('meta[property="og:url"]', url);
+  setMeta('meta[name="twitter:title"]', socialTitle);
+  setMeta('meta[name="twitter:description"]', socialDescription);
+  setMeta('meta[name="twitter:image"]', imageUrl);
 }
 
 function showComic(index, updateUrl = true) {
