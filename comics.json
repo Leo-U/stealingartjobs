@@ -80,5 +80,14 @@
     "alt": "An infographic compares a cam-model site that keeps 40 percent of tips with an ad-supported community site. Both prohibit users from linking to their own sites, keeping traffic and money on the platform.",
     "description": "A comparison of cam-model and ad-supported community sites that argues both prohibit outbound links to keep traffic and money on their platforms.",
     "transcript": ["Left side: A cam-model site keeps 40% of tips and will not let models link to their own sites.", "Right side: An ad-supported community site will not let users link to their own sites.", "Closing comparison: ‘Stated purpose: platform-specific rules.’ ‘Unstated incentive: keep traffic — and money — on the platform.’"]
+  },
+  {
+    "slug": "pay-by-skill",
+    "title": "Pay by Skill",
+    "date": "Uploaded September 24, 2026",
+    "image": "/comics/pay-by-skill.png",
+    "alt": "A deliberately simplistic graph shows pay rising in a perfectly straight line as skill and hard work increase.",
+    "description": "A satirical linear graph suggesting that pay rises perfectly with skill and hard work.",
+    "transcript": ["A graph has a vertical axis labeled ‘Pay’ and a horizontal axis labeled ‘Skill + hard work.’ A muted red line rises perfectly straight from the lower-left corner to the upper right.", "The caption reads, ‘The higher the skill and the harder you work, the better the pay — in a perfectly straight line.’"]
   }
 ]
