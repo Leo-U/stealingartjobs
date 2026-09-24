@@ -45,6 +45,7 @@ button { color: inherit; }
   margin: 0 auto;
   max-width: 1440px;
   padding: 28px 42px;
+  position: relative;
 }
 
 .brand {
@@ -78,6 +79,32 @@ button { color: inherit; }
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.2;
+}
+
+.release-schedule {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  font-weight: 500;
+  gap: 8px;
+  left: 50%;
+  letter-spacing: 0.1em;
+  margin: 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.release-schedule::before {
+  background: var(--accent);
+  border-radius: 50%;
+  content: "";
+  height: 6px;
+  width: 6px;
 }
 
 nav { align-items: center; display: flex; gap: 28px; }
@@ -432,9 +459,16 @@ footer {
 .archive-empty { color: var(--muted); padding: 60px 0; }
 
 @media (max-width: 700px) {
-  .site-header { padding: 22px 20px; }
+  .site-header { flex-wrap: wrap; padding: 22px 20px; row-gap: 14px; }
   nav { gap: 16px; }
   nav a { display: none; }
+  .release-schedule {
+    flex-basis: 100%;
+    justify-content: center;
+    order: 3;
+    position: static;
+    transform: none;
+  }
   .comic-reader { margin-top: 50px; padding: 0 18px; }
   h1 { margin-bottom: 28px; }
   .reader-controls { grid-template-columns: 1fr 1fr; }
