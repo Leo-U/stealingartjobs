@@ -85,9 +85,9 @@
     "slug": "pay-by-skill",
     "title": "Pay by Skill",
     "date": "Uploaded September 24, 2026",
-    "image": "/comics/pay-by-skill.png",
-    "alt": "A deliberately simplistic graph shows pay rising in a perfectly straight line as skill and hard work increase.",
-    "description": "A satirical linear graph suggesting that pay rises perfectly with skill and hard work.",
-    "transcript": ["A graph has a vertical axis labeled ‘Pay’ and a horizontal axis labeled ‘Skill + hard work.’ A muted red line rises perfectly straight from the lower-left corner to the upper right.", "The caption reads, ‘The higher the skill and the harder you work, the better the pay — in a perfectly straight line.’"]
+    "image": "/comics/pay-by-skill.png?v=2",
+    "alt": "A satirical graph places a warehouse worker near the bottom, a medical doctor slightly above, and a Fortune 500 CEO near the top of a perfectly straight line representing pay by skill and hard work.",
+    "description": "A satirical linear graph ranks a warehouse worker, medical doctor, and Fortune 500 CEO as if pay perfectly reflected skill and hard work.",
+    "transcript": ["A graph has a vertical axis labeled ‘Pay’ and a horizontal axis labeled ‘Skill + hard work.’ A muted red line rises perfectly straight from the lower-left corner to the upper right.", "Three points on the line are labeled in ascending order: ‘Warehouse worker’ near the bottom, ‘Medical doctor’ slightly above it, and ‘Fortune 500 CEO’ near the top.", "The caption reads, ‘The higher the skill and the harder you work, the better the pay — in a perfectly straight line.’"]
   }
 ]
