@@ -93,6 +93,7 @@ function renderAuthorNote(note) {
   }
   elements.authorNoteIntro.textContent = note.intro;
   elements.authorNoteCopy.innerHTML = note.html;
+  elements.authorNote.querySelector("details").open = true;
   if (note.image) {
     const beforeGraphic = document.createElement("div");
     beforeGraphic.className = "author-note-before-graphic";
@@ -148,7 +149,7 @@ function updatePageMetadata(comic, isHome = false) {
   setMeta('meta[name="twitter:image"]', imageUrl);
 }
 
-function showComic(index, updateUrl = true) {
+function showComic(index, updateUrl = true, revealStart = updateUrl) {
   if (!state.comics.length) return;
   state.currentIndex = Math.max(0, Math.min(index, state.comics.length - 1));
   const comic = state.comics[state.currentIndex];
@@ -170,6 +171,10 @@ function showComic(index, updateUrl = true) {
   elements.latestButton.disabled = state.currentIndex === state.comics.length - 1;
   if (updateUrl) history.pushState({ comic: comic.slug }, "", comicPath(comic));
   updatePageMetadata(comic, location.pathname === "/");
+  if (revealStart) {
+    const start = comic.authorNote ? elements.authorNote : elements.comicTitle;
+    requestAnimationFrame(() => start.scrollIntoView({ block: "start" }));
+  }
 }
 
 async function loadComics() {
@@ -204,7 +209,6 @@ elements.archiveList.addEventListener("click", (event) => {
   event.preventDefault();
   showComic(Number(link.dataset.comicIndex));
   toggleArchive(false);
-  document.querySelector("#comic").scrollIntoView();
 });
 elements.firstButton.addEventListener("click", () => showComic(0));
 elements.previousButton.addEventListener("click", () => showComic(state.currentIndex - 1));
