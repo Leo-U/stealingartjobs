@@ -89,5 +89,14 @@
     "alt": "A satirical graph places a warehouse worker near the bottom, a medical doctor slightly above, and a Fortune 500 CEO near the top of a perfectly straight line representing pay by skill and hard work.",
     "description": "A satirical linear graph ranks a warehouse worker, medical doctor, and Fortune 500 CEO as if pay perfectly reflected skill and hard work.",
     "transcript": ["A graph has a vertical axis labeled ‘Pay’ and a horizontal axis labeled ‘Skill + hard work.’ A muted red line rises perfectly straight from the lower-left corner to the upper right.", "Three points on the line are labeled in ascending order: ‘Warehouse worker’ near the bottom, ‘Medical doctor’ slightly above it, and ‘Fortune 500 CEO’ near the top.", "The caption reads, ‘The higher the skill and the harder you work, the better the pay — in a perfectly straight line.’"]
+  },
+  {
+    "slug": "living-memory",
+    "title": "Living Memory",
+    "date": "Uploaded October 4, 2026",
+    "image": "/comics/living-memory.png?v=1",
+    "alt": "An elderly Donald Trump, drawn with angular features, says in a large speech balloon, ‘Carter was the worst president in living memory.’",
+    "description": "Donald Trump calls Jimmy Carter the worst president in living memory.",
+    "transcript": ["Single panel: An elderly Donald Trump stands against a layered beige paper-collage background.", "He says, ‘Carter was the worst president in living memory.’"]
   }
 ]
