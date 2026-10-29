@@ -83,9 +83,9 @@
   },
   {
     "slug": "pay-by-skill",
-    "title": "Pay by Skill",
+    "title": "They're just that much smarter bro!",
     "date": "Uploaded September 24, 2026",
-    "image": "/comics/pay-by-skill.png?v=2",
+    "image": "/comics/pay-by-skill.png?v=3",
     "alt": "A satirical graph places a warehouse worker near the bottom, a medical doctor slightly above, and a Fortune 500 CEO near the top of a perfectly straight line representing pay by skill and hard work.",
     "description": "A satirical linear graph ranks a warehouse worker, medical doctor, and Fortune 500 CEO as if pay perfectly reflected skill and hard work.",
     "transcript": ["A graph has a vertical axis labeled ‘Pay’ and a horizontal axis labeled ‘Skill + hard work.’ A muted red line rises perfectly straight from the lower-left corner to the upper right.", "Three points on the line are labeled in ascending order: ‘Warehouse worker’ near the bottom, ‘Medical doctor’ slightly above it, and ‘Fortune 500 CEO’ near the top.", "The caption reads, ‘The higher the skill and the harder you work, the better the pay — in a perfectly straight line.’"]
@@ -105,9 +105,8 @@
     "date": "Uploaded October 29, 2026",
     "image": "/comics/abuse.png?v=4",
     "alt": "A text poster headed ‘Pardoned’ says Donald Trump pardoned four men convicted in the January 6 attack on D.C. police officer Michael Fanone. It lists their conduct and sentences and quotes Fanone: ‘I was tortured. I was beaten.’",
-    "description": "A text-based political comic about Donald Trump's pardons for men convicted in the January 6 attack on D.C. police officer Michael Fanone.",
-    "transcript": ["Headline: ‘Pardoned.’", "On January 20, 2025, Republican President Donald Trump pardoned men convicted in the January 6, 2021 attack on D.C. police officer Michael Fanone.", "Daniel Rodriguez shocked Fanone in the neck with a stun gun and was sentenced to 151 months in prison.", "Albuquerque Cosper Head dragged Fanone into the mob and was sentenced to 90 months in prison.", "Kyle Young restrained Fanone during the attack and was sentenced to 86 months in prison.", "Thomas Sibick stole Fanone's badge and radio during the assault and was sentenced to 50 months in prison.", "Michael Fanone is quoted from June 2021: ‘I was tortured. I was beaten.’", "Sources listed: DOJ records; White House, January 20, 2025; and CBS News, June 23, 2021."],
-    "caption": "The comic describes how a stupid, mouth breathing mob that thought the 2020 election was \"rigged\" beat and tortured a police officer and then got pardoned by a fake president"
+    "description": "The comic describes how a stupid, mouth breathing mob that thought the 2020 election was \"rigged\" beat and tortured a police officer and then got pardoned by a fake president.",
+    "transcript": ["The comic describes how a stupid, mouth breathing mob that thought the 2020 election was \"rigged\" beat and tortured a police officer and then got pardoned by a fake president.", "Headline: ‘Pardoned.’", "On January 20, 2025, Republican President Donald Trump pardoned men convicted in the January 6, 2021 attack on D.C. police officer Michael Fanone.", "Daniel Rodriguez shocked Fanone in the neck with a stun gun and was sentenced to 151 months in prison.", "Albuquerque Cosper Head dragged Fanone into the mob and was sentenced to 90 months in prison.", "Kyle Young restrained Fanone during the attack and was sentenced to 86 months in prison.", "Thomas Sibick stole Fanone's badge and radio during the assault and was sentenced to 50 months in prison.", "Michael Fanone is quoted from June 2021: ‘I was tortured. I was beaten.’", "Sources listed: DOJ records; White House, January 20, 2025; and CBS News, June 23, 2021."]
   },
   {
     "slug": "more-abuse",
