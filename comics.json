@@ -103,10 +103,11 @@
     "slug": "abuse",
     "title": "Abuse",
     "date": "Uploaded October 29, 2026",
-    "image": "/comics/abuse.png?v=3",
-    "alt": "A text-only political comic argues that Republicans are trying to convict members of Congress during the midterms despite unfavorable polling and describes the effort as an attempt to override voters, including through an abusive raid on an innocent congresswoman's home.",
-    "description": "A text-only political comic about efforts to convict members of Congress during the midterms and override the democratic majority of voters.",
-    "transcript": ["Currently, Republicans are trying to convict members of Congress during midterms at a while when polling is obviously against them.", "This may simply be a desperate measure to countermand the authority of the democratic majority of voters, stooping to any contemptible means, including an abusive raid on the home of an innocent congresswoman."]
+    "image": "/comics/abuse.png?v=4",
+    "alt": "A text poster headed ‘Pardoned’ says Donald Trump pardoned four men convicted in the January 6 attack on D.C. police officer Michael Fanone. It lists their conduct and sentences and quotes Fanone: ‘I was tortured. I was beaten.’",
+    "description": "A text-based political comic about Donald Trump's pardons for men convicted in the January 6 attack on D.C. police officer Michael Fanone.",
+    "transcript": ["Headline: ‘Pardoned.’", "On January 20, 2025, Republican President Donald Trump pardoned men convicted in the January 6, 2021 attack on D.C. police officer Michael Fanone.", "Daniel Rodriguez shocked Fanone in the neck with a stun gun and was sentenced to 151 months in prison.", "Albuquerque Cosper Head dragged Fanone into the mob and was sentenced to 90 months in prison.", "Kyle Young restrained Fanone during the attack and was sentenced to 86 months in prison.", "Thomas Sibick stole Fanone's badge and radio during the assault and was sentenced to 50 months in prison.", "Michael Fanone is quoted from June 2021: ‘I was tortured. I was beaten.’", "Sources listed: DOJ records; White House, January 20, 2025; and CBS News, June 23, 2021."],
+    "caption": "The comic describes how a stupid, mouth breathing mob that thought the 2020 election was \"rigged\" beat and tortured a police officer and then got pardoned by a fake president"
   },
   {
     "slug": "more-abuse",
@@ -121,10 +122,9 @@
     "slug": "even-more-abuse",
     "title": "Even More Abuse",
     "date": "Uploaded October 29, 2026",
-    "image": "/comics/even-more-abuse.png",
-    "alt": "A text poster headed ‘Pardoned’ says Donald Trump pardoned four men convicted in the January 6 attack on D.C. police officer Michael Fanone. It lists their conduct and sentences and quotes Fanone: ‘I was tortured. I was beaten.’",
-    "description": "A text-based political comic about Donald Trump's pardons for men convicted in the January 6 attack on D.C. police officer Michael Fanone.",
-    "transcript": ["Headline: ‘Pardoned.’", "On January 20, 2025, Republican President Donald Trump pardoned men convicted in the January 6, 2021 attack on D.C. police officer Michael Fanone.", "Daniel Rodriguez shocked Fanone in the neck with a stun gun and was sentenced to 151 months in prison.", "Albuquerque Cosper Head dragged Fanone into the mob and was sentenced to 90 months in prison.", "Kyle Young restrained Fanone during the attack and was sentenced to 86 months in prison.", "Thomas Sibick stole Fanone's badge and radio during the assault and was sentenced to 50 months in prison.", "Michael Fanone is quoted from June 2021: ‘I was tortured. I was beaten.’", "Sources listed: DOJ records; White House, January 20, 2025; and CBS News, June 23, 2021."],
-    "caption": "The comic describes how a stupid, mouth breathing mob that thought the 2020 election was \"rigged\" beat and tortured a police officer and then got pardoned by a fake president"
+    "image": "/comics/even-more-abuse.png?v=2",
+    "alt": "A text-only political comic argues that Republicans are trying to convict members of Congress during the midterms despite unfavorable polling and describes the effort as an attempt to override voters, including through an abusive raid on an innocent congresswoman's home.",
+    "description": "A text-only political comic about efforts to convict members of Congress during the midterms and override the democratic majority of voters.",
+    "transcript": ["Currently, Republicans are trying to convict members of Congress during midterms at a while when polling is obviously against them.", "This may simply be a desperate measure to countermand the authority of the democratic majority of voters, stooping to any contemptible means, including an abusive raid on the home of an innocent congresswoman."]
   }
 ]
