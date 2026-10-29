@@ -104,6 +104,15 @@
     "title": "Abuse",
     "date": "Uploaded October 29, 2026",
     "image": "/comics/abuse.png",
+    "alt": "A collage-style political comic shows a suited figure whose face is covered by a placard reading ‘The Rube (Marco Rubio).’ He says foreign aid workers should help no one but America. A caption says, ‘This actually happened.’",
+    "description": "A satirical political comic about Marco Rubio telling foreign aid workers that their place is to help only America.",
+    "transcript": ["Single panel: A suited man raises one finger. His face is hidden by a placard reading, ‘The Rube (Marco Rubio).’", "He says, ‘It's not the place of these foreign aid workers to help anyone but America.’", "The closing caption reads, ‘This actually happened.’"]
+  },
+  {
+    "slug": "more-abuse",
+    "title": "More Abuse",
+    "date": "Uploaded October 29, 2026",
+    "image": "/comics/more-abuse.png",
     "alt": "A text-only political comic argues that Republicans are trying to convict members of Congress during the midterms despite unfavorable polling and describes the effort as an attempt to override voters, including through an abusive raid on an innocent congresswoman's home.",
     "description": "A text-only political comic about efforts to convict members of Congress during the midterms and override the democratic majority of voters.",
     "transcript": ["Currently, Republicans are trying to convict members of Congress during midterms at a while when polling is obviously against them.", "This may simply be a desperate measure to countermand the authority of the democratic majority of voters, stooping to any contemptible means, including an abusive raid on the home of an innocent congresswoman."]
