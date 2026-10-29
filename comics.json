@@ -98,5 +98,14 @@
     "alt": "An elderly Donald Trump, drawn with angular features, says in a large speech balloon, ‘Carter was the worst president in living memory.’",
     "description": "Donald Trump calls Jimmy Carter the worst president in living memory.",
     "transcript": ["Single panel: An elderly, weak, and ignorant Donald Trump stands against a layered beige paper-collage background.", "He says, ‘Carter was the worst president in living memory.’"]
+  },
+  {
+    "slug": "abuse",
+    "title": "Abuse",
+    "date": "Uploaded October 29, 2026",
+    "image": "/comics/abuse.png",
+    "alt": "A text-only political comic argues that Republicans are trying to convict members of Congress during the midterms despite unfavorable polling and describes the effort as an attempt to override voters, including through an abusive raid on an innocent congresswoman's home.",
+    "description": "A text-only political comic about efforts to convict members of Congress during the midterms and override the democratic majority of voters.",
+    "transcript": ["Currently, Republicans are trying to convict members of Congress during midterms at a while when polling is obviously against them.", "This may simply be a desperate measure to countermand the authority of the democratic majority of voters, stooping to any contemptible means, including an abusive raid on the home of an innocent congresswoman."]
   }
 ]
