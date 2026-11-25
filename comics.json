@@ -125,5 +125,15 @@
     "alt": "A text-only political comic argues that Republicans are trying to convict members of Congress during the midterms despite unfavorable polling and describes the effort as an attempt to override voters, including through an abusive raid on an innocent congresswoman's home.",
     "description": "A text-only political comic about efforts to convict members of Congress during the midterms and override the democratic majority of voters.",
     "transcript": ["Currently, Republicans are trying to convict members of Congress during midterms at a while when polling is obviously against them.", "This may simply be a desperate measure to countermand the authority of the democratic majority of voters, stooping to any contemptible means, including an abusive raid on the home of an innocent congresswoman."]
+  },
+  {
+    "slug": "amazon-tuition-assistance",
+    "title": "Please Do Not Work For or Buy from Amazon -- A Message From Their Employee.",
+    "date": "Uploaded November 25, 2026",
+    "image": "/comics/amazon-tuition-assistance.png?v=1",
+    "alt": "Four-panel comic showing an Amazon employee repeatedly receiving conflicting approvals and denials for tuition assistance.",
+    "description": "A four-panel comic about a hardworking Amazon warehouse employee whose tuition assistance is repeatedly approved and denied while he tries to become a nurse in Georgia.",
+    "transcript": ["Panel 1: The employee sits at a computer. The heading reads, ‘I was late with my tuition assistance request to Amazon, but was told that's ok.’ His monitor says, ‘However, one-time exception granted. Tuition assistance approved.’", "Panel 2: The heading reads, ‘Then they denied that same assistance anyway.’ His monitor says, ‘Tuition assistance denied.’", "Panel 3: The heading reads, ‘I appealed. They approved the assistance again.’ His monitor says, ‘Tuition assistance approved.’", "Panel 4: The heading reads, ‘Next semester, I applied early, but was denied again on undisclosed grounds.’ Holding his head, he asks, ‘Why?’ His monitor says, ‘Tuition assistance denied.’"],
+    "caption": "I'm known for being a hard worker at the warehouse. All I did was ask for tuition help to become a nurse in Georgia — a state with a nursing shortage."
   }
 ]
