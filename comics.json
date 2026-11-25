@@ -40,10 +40,10 @@
     "slug": "automoderation",
     "title": "Moderators",
     "date": "Uploaded August 23, 2026",
-    "image": "/comics/automoderation.png?v=3",
+    "image": "/comics/automoderation.png?v=4",
     "alt": "Four-panel comic. A post arguing about freelance-platform fees is automatically removed for containing an external link. The author politely messages the moderators, then is temporarily banned for self-promotion.",
     "description": "A comic about an automatically removed Reddit post, a polite appeal to moderators, and a five-day ban for self-promotion.",
-    "transcript": ["Panel 1: A Reddit-style post is being submitted to r/Fiverr. It reads, ‘Freelance platforms like Fiverr and Upwork might be bad for the economy because of their fees. A privately owned, publicly owned, nonprofit, taxpayer-funded, or otherwise public-interest alternative could provide the same marketplace function without taking a cut from transactions. But I defer to the expert consensus on this one.’ An external link follows. The cursor clicks ‘Post.’", "Panel 2: A red X appears above the notice ‘Post removed automatically.’ The reason given is: ‘External links can be self-promotion.’", "Panel 3: The author writes to the r/Fiverr moderators: ‘I hope you're having a great day! Please allow the post. It doesn't count as self-promotion.’ The cursor clicks ‘Send.’", "Panel 4, labeled ‘A day or two later’: A notice says, ‘You have been temporarily banned from participating in r/Fiverr for 5 days.’ The moderator note reads, ‘Rule 1: No self-promotion.’"]
+    "transcript": ["Panel 1: A Reddit-style post is being submitted to r/Fiverr. It reads, ‘Freelance platforms like Fiverr and Upwork might be bad for the economy because of their fees. A privately owned, publicly owned, nonprofit, taxpayer-funded, or otherwise public-interest alternative could provide the same marketplace function without taking a cut from transactions. But I defer to the expert consensus on this one.’ An external link follows. The cursor clicks ‘Post.’", "Panel 2: A red X appears above the notice ‘Post removed automatically.’ The reason given is: ‘External links can be self-promotion.’", "Panel 3: The author writes to the r/Fiverr moderators: ‘I hope you're having a great day! Please allow the post. It's not self-promotion.’ The cursor clicks ‘Send.’", "Panel 4, labeled ‘A day or two later’: A notice says, ‘You have been temporarily banned from participating in r/Fiverr for 5 days.’ The moderator note reads, ‘Rule 1: No self-promotion.’"]
   },
   {
     "slug": "executive",
