@@ -127,7 +127,8 @@
     "transcript": ["Currently, Republicans are trying to convict members of Congress during midterms at a while when polling is obviously against them.", "This may simply be a desperate measure to countermand the authority of the democratic majority of voters, stooping to any contemptible means, including an abusive raid on the home of an innocent congresswoman."]
   },
   {
-    "slug": "amazon-tuition-assistance",
+    "slug": "amazon-career-choice",
+    "aliases": ["amazon-tuition-assistance"],
     "title": "Amazon Career Choice",
     "date": "Uploaded November 25, 2026",
     "image": "/comics/amazon-tuition-assistance.png?v=4",
